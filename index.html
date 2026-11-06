@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Mugni Mahbub</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        main {
+            width: 100%;
+            max-width: 640px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        header p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        article p {
+            margin-bottom: 1rem;
+            color: #334155;
+            text-align: justify;
+        }
+
+        section {
+            margin-top: 1.75rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 0.65rem 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        section p {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        footer {
+            margin-top: 1.5rem;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>Muhammad Mugni Mahbub</h1>
+            <p>NIM: 24552011240 | Kelas: TIF RP 24E</p>
+        </header>
+
+        <article>
+            <p>
+                Perkenalkan, saya Muhammad Mugni Mahbub, mahasiswa Program Studi Teknik Informatika di Universitas Teknologi Bandung. 
+                Halaman web ini disusun sebagai pemenuhan tugas praktikum mata kuliah Pemrograman Web yang berfokus pada pemahaman struktur dokumen HTML serta styling dasar menggunakan CSS.
+            </p>
+            <p>
+                Dalam proses pembelajaran web, penerapan elemen HTML yang semantik sangat diutamakan agar setiap bagian halaman memiliki fungsi dan hierarki yang jelas. 
+                Penggunaan tag yang tepat tidak hanya membuat dokumen rapi, namun juga mempermudah pembacaan kode, meningkatkan aksesibilitas pengguna, dan mendukung optimasi mesin pencari.
+            </p>
+            <p>
+                Selain struktur dan tampilan, integrasi logika pemrograman menggunakan JavaScript turut dipelajari untuk memberikan kemampuan interaktif pada halaman web. 
+                Melalui interaksi sederhana seperti penanganan event klik pada tombol, halaman statis dapat merespons aksi pengunjung secara dinamis secara langsung di sisi peramban.
+            </p>
+        </article>
+
+        <section>
+            <button type="button" onclick="jalankanInteraksi()">Jalankan Interaksi</button>
+            <p id="pesan-interaksi">Status: Klik tombol di atas untuk menjalankan fungsi JavaScript.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muhammad Mugni Mahbub - Pemrograman Web</p>
+    </footer>
+
+    <script>
+        function jalankanInteraksi() {
+            alert("Halo! Interaksi JavaScript berhasil dijalankan.");
+            const waktu = new Date().toLocaleTimeString("id-ID", {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            });
+            document.getElementById("pesan-interaksi").textContent = "Tombol berhasil diklik pada pukul " + waktu + " WIB.";
+        }
+    </script>
+</body>
+</html>
